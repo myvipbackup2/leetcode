@@ -33,3 +33,13 @@
     Example1: x = 123, return 321
     Example2: x = -123, return -321
     ```
+5. [Reverse String](ReverseString.html)
+
+    Write a function that takes a string as input and returns the string reversed.
+    
+    _Example:_
+    
+    ```
+    Given s = "hello", return "olleh".
+    ```
+    

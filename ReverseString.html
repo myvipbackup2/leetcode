@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse String</title>
+</head>
+<body>
+<h4>
+    Write a function that takes a string as input and returns the string reversed.
+</h4>
+
+<em>
+    Example:
+</em>
+
+<strong>Given s = "hello", return "olleh".</strong>
+
+<script>
+    /**
+     * @function reverseString
+     * @param {string} s
+     * @return {string}
+     * Runtime: 165 ms
+     */
+    function reverseString(s) {
+        return [...s].reverse().join('');
+    }
+
+    console.log(reverseString('hello'))
+</script>
+</body>
+</html>
