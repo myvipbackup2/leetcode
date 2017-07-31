@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse Integer</title>
+</head>
+<body>
+
+<h4>Reverse digits of an integer.</h4>
+
+<pre>
+
+    Example1: x = 123, return 321
+    Example2: x = -123, return -321
+
+</pre>
+
+<em style="color: #f00;">
+    Note:
+</em>
+<strong>
+    The input is assumed to be a 32-bit signed integer. Your function should return 0 when the reversed integer
+    overflows.
+</strong>
+
+<script>
+
+    /**
+     * @param {number} x
+     * @return {number}
+     * Runtime: 138 ms Your runtime beats 92.79 % of javascript submissions
+     */
+    function reverse(x) {
+        let arr = [...x.toString()];
+        const MAX_32_BIT_NUMBER = 2147483647;  //32-bit signed integer
+        let result = '';
+        if (arr[0] === '-') {
+            for (let i = arr.length - 1; i > 0; i--) {
+                result += arr[i];
+            }
+            return result <= MAX_32_BIT_NUMBER ? parseInt('-' + result) : 0;
+        } else {
+            for (let i = arr.length - 1; i > -1; i--) {
+                result += arr[i];
+            }
+            return result <= MAX_32_BIT_NUMBER ? parseInt(result) : 0;
+        }
+    }
+
+    /**
+     * @param {number} x
+     * @return {number}
+     * Runtime: 122 ms
+     */
+    function reverse2(x) {
+        let result = 0;
+        let digit;
+        let newResult;
+        while (x !== 0) {
+            digit = x % 10;
+            newResult = (result * 10 + digit) | 0;
+            if (((newResult - digit) / 10) !== result) {
+                return 0;
+            }
+            result = newResult;
+            x = (x - digit) / 10;
+        }
+        return result;
+    }
+
+    console.log(reverse(-123));
+    console.log(reverse2(9832198312));
+
+</script>
+</body>
+</html>

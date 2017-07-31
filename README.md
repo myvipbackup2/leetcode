@@ -24,3 +24,12 @@
     Given a roman numeral, convert it to an integer.
     
     Input is guaranteed to be within the range from 1 to 3999.
+    
+4. [Reverse Integer](ReverseInteger.html)
+    
+    Reverse digits of an integer.
+    
+    ```
+    Example1: x = 123, return 321
+    Example2: x = -123, return -321
+    ```
