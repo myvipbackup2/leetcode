@@ -3,7 +3,7 @@
 ### 记录一下刷 leetcode 或者其他面试 编程题
 
 
-1. [使用原生JS，找出HTML中出现次数最多的标签并输出](findTheMost.html)
+1. [使用原生JS，找出HTML中出现次数最多的标签并输出](FindTheMost.html)
 
 2. [Two Sum](TwoSum.html)
 
