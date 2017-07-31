@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Longest Substring Without Repeating Characters</title>
+</head>
+<body>
+<pre>
+        Given a string, find the length of the longest substring without repeating characters.
+
+        Examples:
+
+        Given "abcabcbb", the answer is "abc", which the length is 3.
+
+        Given "bbbbb", the answer is "b", with the length of 1.
+
+        Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+    </pre>
+
+
+<script>
+
+    /**
+     * @param {string} s
+     * @return {number}
+     * Runtime: 169 ms
+     */
+
+    function lengthOfLongestSubstring(s) {
+        let answer = 0;
+        let map = new Map();
+        for (let i = 0, j = 0, len = s.length; i < len; i++) {
+            if (map.has(s.charAt(i))) {
+                j = Math.max(map.get(s.charAt(i)), j)
+            }
+            answer = Math.max(answer, i - j + 1);
+            map.set(s.charAt(i), i + 1);
+        }
+        return answer;
+    }
+
+    console.log(lengthOfLongestSubstring('pwwkew'))
+
+</script>
+</body>
+</html>
