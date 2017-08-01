@@ -56,3 +56,10 @@
     
     Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
    ``` 
+   
+7. [Single Number](SingleNumber.html)
+
+    Given an array of integers, every element appears twice except for one. Find that single one.
+    
+    _Note:_  
+    Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
