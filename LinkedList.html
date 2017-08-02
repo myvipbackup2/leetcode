@@ -20,11 +20,24 @@
             this.count = 0;
         }
 
-        getLength() {
+        // 获取链表长度
+        size() {
             return this.count;
         }
 
-        addLast(data) {
+        //显示
+        show() {
+            if (this.count) {
+                let node = this.head;
+                while (node) {
+                    console.log(node.data);
+                    node = node.next;
+                }
+            }
+        }
+
+        //节点插入尾部
+        push(data) {
             // Create a new Node
             const node = {
                 data: data,
@@ -44,7 +57,8 @@
             this.count++;
         }
 
-        addFirst(data) {
+        //节点插入头部
+        unshift(data) {
             // Create a new Node
             const node = {
                 data: data,
@@ -69,7 +83,8 @@
             }
         }
 
-        removeFirst(data) {
+        //从头部删除节点
+        shift() {
             if (this.count > 0) {
                 // The head should point to the second element
                 this.head = this.head.next;
@@ -83,7 +98,8 @@
             }
         }
 
-        removeLast(data) {
+        //从尾部删除节点
+        pop() {
             if (this.count > 0) {
                 if (this.count === 1) {
                     this.head = null;
@@ -102,6 +118,24 @@
             }
         }
     }
+
+    let linkedList = new LinkedList();
+
+    linkedList.push(1);
+    linkedList.push(2);
+    linkedList.push(3);
+    linkedList.push(4);
+    linkedList.push(5);
+
+    console.log(linkedList);
+    console.log('size:' + linkedList.size());
+    linkedList.shift();
+    linkedList.unshift(6);
+    linkedList.pop();
+    linkedList.push(7);
+    linkedList.show();
+
+
 </script>
 
 </body>
