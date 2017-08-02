@@ -28,10 +28,10 @@
         //显示
         show() {
             if (this.count) {
-                let node = this.head;
-                while (node) {
-                    console.log(node.data);
-                    node = node.next;
+                let current = this.head;
+                while (current) {
+                    console.log(current.data);
+                    current = current.next;
                 }
             }
         }
