@@ -63,3 +63,7 @@
     
     _Note:_  
     Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+    
+8. [Linked List](LinkedList.html)
+
+    使用ES6语法实现一个 _链表_
